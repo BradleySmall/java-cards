@@ -1,4 +1,6 @@
-public enum Rank { 
+package com.small.Cards;
+
+public enum Rank {
 	ACE   ("A")
   , DEUCE ("2")
   , THREE ("3")
@@ -15,12 +17,17 @@ public enum Rank {
   ;
 	private final String shortName;
 	
-	Rank(String shortName){this.shortName = shortName;};
+	Rank(String shortName) {
+	    this.shortName = shortName;
+	}
 
-	public String getShortName() {return shortName;}
+	public String getShortName() {
+	    return shortName;
+	}
 	
-	@Override public String toString() { 
+	@Override
+    public String toString() {
 		String s = super.toString();
-		return s.substring(0,1) + s.substring(1).toLowerCase();
+		return s.charAt(0) + s.substring(1).toLowerCase();
 	}
 }
